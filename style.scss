@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+$primary-color: #43853d;
+
 *, *::before, *::after {
 	box-sizing: inherit;
 	margin: 0;
@@ -20,4 +22,61 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	background-color: $primary-color;
+	color: #fff;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	&__text {
+
+	}
+
+	&__image {
+		width: 50%;
+		height: auto;
+	}
+}
+
+.btn {
+	color: #fff;
+	border: 0.5rem solid #fff;
+	background-color: transparent;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	font-family: inherit;
+	display: inline-block;
+	margin-top: 2rem;
+	transition: transform 0.1s ease-in-out;
+
+	&:active {
+		transform: scale(0.9);
+		border-style: solid;
+	}
+
+	&:focus:not(:active) {
+		border-style: dashed;
+		outline: none;
+	}
+
+	&--cta {
+		text-transform: uppercase;
+		font-size: inherit;
+		font-weight: bold;
+	}
+}
+
+.main {
+	height: 100vh;
 }

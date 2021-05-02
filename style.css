@@ -19,6 +19,55 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-color: #43853d;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo__image {
+  width: 50%;
+  height: auto;
+}
+
+.btn {
+  color: #fff;
+  border: 0.5rem solid #fff;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: transform 0.1s ease-in-out;
+}
+.btn:active {
+  transform: scale(0.9);
+  border-style: solid;
+}
+.btn:focus:not(:active) {
+  border-style: dashed;
+  outline: none;
+}
+.btn--cta {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.main {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
