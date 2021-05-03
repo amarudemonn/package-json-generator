@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	height: 100vh;
+	background-color: $primary-color;
+	color: #fff;
+}

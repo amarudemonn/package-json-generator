@@ -1,0 +1,50 @@
+.form {
+	width: 100%;
+}
+
+.input-group {
+	position: relative;
+
+	&:not(:last-of-type) {
+		margin-bottom: 3.5rem;
+	}
+
+	&__label {
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		transform: translateY(-50%);
+	}
+
+	&__label span {
+		display: inline-block;
+		transition: transform .3s ease-in-out;
+	}
+
+	&__input {
+		-webkit-appearance: none;
+  	appearance: none;
+
+		font-family: inherit;
+		font-size: 100%;
+		color: $primary-color;
+		display: block;
+		width: 100%;
+		padding: 0.4rem;
+		outline: none;
+		border: none;
+		border-bottom: 2px solid $primary-color;
+
+		&:focus + label span {
+			transform: translateY(-110%);
+		}
+	}
+}
+
+.translated {
+	transform: translateY(-110%);
+}
+
+.controls {
+	text-align: center;
+}

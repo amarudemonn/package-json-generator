@@ -1,0 +1,16 @@
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.50%; // 10px
+}
+
+@media only screen and (max-width: 450px) {
+	html {
+		font-size: 50%;
+	}
+}

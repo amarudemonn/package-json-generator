@@ -1,0 +1,22 @@
+.code-container {
+	display: flex;
+	flex-direction: column;
+
+	&__code {
+		font-family: 'Ubuntu Mono', monospace;
+  	font-size: inherit;
+  	background: #ffeff0;
+  	color: $primary-color;
+	  padding: .1rem .3rem .2rem;
+  	border-radius: .2rem;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		hyphens: none;
+		white-space: pre;
+	}
+
+	.btn {
+		margin-top: 5rem;
+	}
+}

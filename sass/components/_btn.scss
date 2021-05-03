@@ -1,0 +1,38 @@
+.btn {
+	color: #fff;
+	border: 0.5rem solid #fff;
+	background-color: transparent;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	font-family: inherit;
+	display: inline-block;
+	transition: transform 0.1s ease-in-out;
+
+	&:active {
+		transform: scale(0.9);
+		border-style: solid;
+	}
+
+	&:focus:not(:active) {
+		border-style: dashed;
+		outline: none;
+	}
+
+	&--cta {
+		text-transform: uppercase;
+		font-size: inherit;
+		font-weight: bold;
+		margin-top: 2rem;
+	}
+
+	&--control {
+		color: $primary-color;
+		border-color: $primary-color;
+
+		&:disabled {
+			color: $secondary-color;
+			border-color: $secondary-color;
+			cursor: not-allowed;
+		}
+	}
+}
