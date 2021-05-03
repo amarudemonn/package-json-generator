@@ -32,12 +32,7 @@ form.addEventListener('input', function(e) {
 });
 
 let currentActive = 1;
-let obj = {
-							"name": "test-project",
-							"version": "1.0.0",
-							"description": "A Vue.js project",
-							"main": "src/main.js","private": true
-						};
+let obj = {};
 
 function downloadObjectAsJson(exportObj, exportName){
   var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj, null, 2));
@@ -75,6 +70,17 @@ function update() {
 	sections[currentActive - 1].classList.add('show');
 
 	if (currentActive === 4) {
+		inputs.forEach(input => {
+			if (input.value) {
+				if (input.id === 'keywords') {
+					obj[input.id] = input.value.split(' ');
+				} else if (input.id === 'private') {
+					obj[input.id] = (input.value === 'true');
+				} else {
+					obj[input.id] = input.value;
+				}
+			}
+		});
 		code.textContent = JSON.stringify(obj, null, 2);
 	}
 }

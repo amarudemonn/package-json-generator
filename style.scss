@@ -20,6 +20,7 @@ body {
 	font-size: 1.8rem;
 	line-height: 1.5;
 	height: 100vh;
+	overflow: hidden;
 	background-color: $primary-color;
 	color: #fff;
 }
@@ -37,10 +38,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-
-	&__text {
-
-	}
 
 	&__image {
 		width: 50%;
@@ -88,6 +85,7 @@ body {
 }
 
 .main {
+	height: 100vh;
 	max-width: 60rem;
 	margin: 2rem auto;
 	display: flex;
