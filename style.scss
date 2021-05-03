@@ -30,6 +30,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	text-align: center;
+	padding: 2rem;
 }
 
 .logo {
@@ -223,5 +225,17 @@ body {
 
 	.btn {
 		margin-top: 5rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.main {
+		margin: 2rem 4rem;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	html {
+		font-size: 50%;
 	}
 }
