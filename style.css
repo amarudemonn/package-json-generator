@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 *, *::before, *::after {
   box-sizing: inherit;
   margin: 0;
@@ -15,15 +16,13 @@ body {
   font-size: 1.8rem;
   line-height: 1.5;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   background-color: #43853d;
   color: #fff;
 }
 
 .header {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +48,6 @@ body {
   cursor: pointer;
   font-family: inherit;
   display: inline-block;
-  margin-top: 2rem;
   transition: transform 0.1s ease-in-out;
 }
 .btn:active {
@@ -64,10 +62,147 @@ body {
   text-transform: uppercase;
   font-size: inherit;
   font-weight: bold;
+  margin-top: 2rem;
+}
+.btn--control {
+  color: #43853d;
+  border-color: #43853d;
+}
+.btn--control:disabled {
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
 }
 
 .main {
-  height: 100vh;
+  max-width: 60rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  color: #43853d;
+  border-radius: 1.5rem;
+}
+
+.form {
+  width: 100%;
+}
+
+.section {
+  padding: 5rem;
+  display: none;
+}
+
+.section.show {
+  display: block;
+}
+
+.input-group {
+  position: relative;
+}
+.input-group:not(:last-of-type) {
+  margin-bottom: 3.5rem;
+}
+.input-group__label {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+}
+.input-group__label span {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+.input-group__input {
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+  color: #43853d;
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #43853d;
+}
+.input-group__input:focus + label span {
+  transform: translateY(-110%);
+}
+
+.translated {
+  transform: translateY(-110%);
+}
+
+.controls {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.progress-container::before {
+  content: "";
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+}
+.progress-container__progress {
+  background-color: #43853d;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  transition: 0.4s ease;
+}
+.progress-container__circle {
+  background-color: #fff;
+  color: inherit;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #e0e0e0;
+  transition: 0.4s ease;
+  z-index: 10;
+}
+.progress-container__circle.active {
+  border-color: #43853d;
+}
+
+.code-container {
+  display: flex;
+  flex-direction: column;
+}
+.code-container__code {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: inherit;
+  background: #ffeff0;
+  color: #43853d;
+  padding: 0.1rem 0.3rem 0.2rem;
+  border-radius: 0.2rem;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  hyphens: none;
+  white-space: pre;
+}
+.code-container .btn {
+  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
